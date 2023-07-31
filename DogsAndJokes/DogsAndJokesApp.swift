@@ -13,7 +13,7 @@ struct DogsAndJokesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
         .modelContainer(for: Item.self)
     }

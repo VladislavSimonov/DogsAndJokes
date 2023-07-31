@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A04BF5C12A77B1B000D9D411 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5C02A77B1B000D9D411 /* TabBarView.swift */; };
+		A04BF5C32A77B4DC00D9D411 /* DogsAndJokesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5C22A77B4DC00D9D411 /* DogsAndJokesView.swift */; };
+		A04BF5C52A77B5E000D9D411 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5C42A77B5E000D9D411 /* URLImage.swift */; };
+		A04BF5C82A77EB7900D9D411 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5C72A77EB7900D9D411 /* NetworkManager.swift */; };
+		A04BF5CC2A77EBD800D9D411 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5CB2A77EBD800D9D411 /* DogModel.swift */; };
 		A092BA9E2A77A1D80055C12E /* DogsAndJokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BA9D2A77A1D80055C12E /* DogsAndJokesApp.swift */; };
-		A092BAA02A77A1D80055C12E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BA9F2A77A1D80055C12E /* ContentView.swift */; };
+		A092BAA02A77A1D80055C12E /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BA9F2A77A1D80055C12E /* FavoritesView.swift */; };
 		A092BAA22A77A1D80055C12E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BAA12A77A1D80055C12E /* Item.swift */; };
 		A092BAA42A77A1DB0055C12E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A092BAA32A77A1DB0055C12E /* Assets.xcassets */; };
 		A092BAA72A77A1DB0055C12E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A092BAA62A77A1DB0055C12E /* Preview Assets.xcassets */; };
@@ -35,9 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A04BF5C02A77B1B000D9D411 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A04BF5C22A77B4DC00D9D411 /* DogsAndJokesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsAndJokesView.swift; sourceTree = "<group>"; };
+		A04BF5C42A77B5E000D9D411 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		A04BF5C72A77EB7900D9D411 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A04BF5CB2A77EBD800D9D411 /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		A092BA9A2A77A1D80055C12E /* DogsAndJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogsAndJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A092BA9D2A77A1D80055C12E /* DogsAndJokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsAndJokesApp.swift; sourceTree = "<group>"; };
-		A092BA9F2A77A1D80055C12E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A092BA9F2A77A1D80055C12E /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A092BAA12A77A1D80055C12E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A092BAA32A77A1DB0055C12E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A092BAA62A77A1DB0055C12E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -73,6 +83,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A04BF5C62A77EB4000D9D411 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A04BF5C42A77B5E000D9D411 /* URLImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A04BF5C92A77EBBB00D9D411 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A04BF5CA2A77EBCF00D9D411 /* Models */,
+				A04BF5C72A77EB7900D9D411 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A04BF5CA2A77EBCF00D9D411 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A04BF5CB2A77EBD800D9D411 /* DogModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A04BF5CD2A77EC6500D9D411 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A04BF5C02A77B1B000D9D411 /* TabBarView.swift */,
+				A04BF5C22A77B4DC00D9D411 /* DogsAndJokesView.swift */,
+				A092BA9F2A77A1D80055C12E /* FavoritesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A092BA912A77A1D80055C12E = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				A092BA9D2A77A1D80055C12E /* DogsAndJokesApp.swift */,
-				A092BA9F2A77A1D80055C12E /* ContentView.swift */,
 				A092BAA12A77A1D80055C12E /* Item.swift */,
-				A092BAA32A77A1DB0055C12E /* Assets.xcassets */,
+				A04BF5CD2A77EC6500D9D411 /* View */,
 				A092BAA52A77A1DB0055C12E /* Preview Content */,
+				A04BF5C92A77EBBB00D9D411 /* Network */,
+				A04BF5C62A77EB4000D9D411 /* Helpers */,
+				A092BAA32A77A1DB0055C12E /* Assets.xcassets */,
 			);
 			path = DogsAndJokes;
 			sourceTree = "<group>";
@@ -260,8 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A092BAA02A77A1D80055C12E /* ContentView.swift in Sources */,
+				A04BF5C32A77B4DC00D9D411 /* DogsAndJokesView.swift in Sources */,
+				A04BF5C52A77B5E000D9D411 /* URLImage.swift in Sources */,
+				A092BAA02A77A1D80055C12E /* FavoritesView.swift in Sources */,
+				A04BF5C82A77EB7900D9D411 /* NetworkManager.swift in Sources */,
+				A04BF5CC2A77EBD800D9D411 /* DogModel.swift in Sources */,
 				A092BAA22A77A1D80055C12E /* Item.swift in Sources */,
+				A04BF5C12A77B1B000D9D411 /* TabBarView.swift in Sources */,
 				A092BA9E2A77A1D80055C12E /* DogsAndJokesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
