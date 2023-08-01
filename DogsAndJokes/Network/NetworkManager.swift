@@ -31,6 +31,28 @@ struct NetworkManager {
         }
     }
     
+    static func getJoke() async throws -> JokeModel {
+        let endpoint = "https://official-joke-api.appspot.com/random_joke"
+        
+        guard let url = URL(string: endpoint) else { throw NetworkError.invalidURL }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse,
+              response.statusCode == 200
+        else {
+            throw NetworkError.invalidResponse
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            return try decoder.decode(JokeModel.self, from: data)
+        } catch {
+            throw NetworkError.invalidData
+        }
+    }
+    
 }
 
 enum NetworkError: Error {
