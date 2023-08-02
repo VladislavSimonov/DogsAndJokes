@@ -18,12 +18,12 @@ struct FavoritesListView: View {
     
     var body: some View {
         HStack {
-            URLImage(url: URL(string: favoriteItem?.dogModel.message ?? ""))
+            URLImage(url: URL(string: favoriteItem?.dogPhotoUrlString ?? ""))
                 .cornerRadius(10)
                 .frame(width: 100, height: 75)
             
             VStack(alignment: .leading, content: {
-                Text("\(favoriteItem?.jokeModel.setup ?? "") \n\(favoriteItem?.jokeModel.punchline ?? "")")
+                Text("\(favoriteItem?.joke ?? "")")
                     .padding(10)
             })
         }

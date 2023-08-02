@@ -90,7 +90,10 @@ struct DogsAndJokesView: View {
         guard let dogModel = dogModel,
               let jokeModel = jokeModel else { return }
         
-        let newItem = FavoriteItem(dogModel: dogModel, jokeModel: jokeModel)
+        let newItem = FavoriteItem(
+            dogPhotoUrlString: dogModel.message,
+            joke: "\(jokeModel.setup) \n\(jokeModel.punchline)"
+        )
         modelContext.insert(newItem)
     }
 }

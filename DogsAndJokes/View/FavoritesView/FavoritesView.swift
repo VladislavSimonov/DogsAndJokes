@@ -17,7 +17,11 @@ struct FavoritesView: View {
             List {
                 ForEach(favoriteItems) { item in
                     FavoritesListView(favoriteItem: item)
-                }
+                }.onDelete(perform: { indexSet in
+                    for index in indexSet {
+                        modelContext.delete(favoriteItems[index])
+                    }
+                })
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

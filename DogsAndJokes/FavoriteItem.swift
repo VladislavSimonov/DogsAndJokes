@@ -10,13 +10,14 @@ import SwiftData
 
 @Model
 final class FavoriteItem {
-    let dogModel: DogModel
-    let jokeModel: JokeModel
     
-    init(dogModel: DogModel,
-         jokeModel: JokeModel)
+    let dogPhotoUrlString: String
+    let joke: String
+    
+    init(dogPhotoUrlString: String,
+         joke: String)
     {
-        self.dogModel = dogModel
-        self.jokeModel = jokeModel
+        self.dogPhotoUrlString = dogPhotoUrlString
+        self.joke = joke
     }
 }
