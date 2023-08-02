@@ -15,6 +15,6 @@ struct DogsAndJokesApp: App {
         WindowGroup {
             TabBarView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(for: FavoriteItem.self)
     }
 }

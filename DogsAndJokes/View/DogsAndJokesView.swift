@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DogsAndJokesView: View {
+    
+    @Environment(\.modelContext) private var modelContext
     
     @State private var dogModel: DogModel?
     @State private var jokeModel: JokeModel?
@@ -28,6 +31,7 @@ struct DogsAndJokesView: View {
                 
                 Button(action: {
                     isLike.toggle()
+                    addFavoriteItem()
                 }) {
                     Label("", systemImage: isLike ? "heart.fill" : "heart")
                         .frame(width: 44, height: 44)
@@ -81,9 +85,17 @@ struct DogsAndJokesView: View {
         getDogModel()
         getJokeModel()
     }
+    
+    private func addFavoriteItem() {
+        guard let dogModel = dogModel,
+              let jokeModel = jokeModel else { return }
+        
+        let newItem = FavoriteItem(dogModel: dogModel, jokeModel: jokeModel)
+        modelContext.insert(newItem)
+    }
 }
  
 #Preview {
     DogsAndJokesView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: FavoriteItem.self, inMemory: true)
 }
