@@ -13,7 +13,7 @@ struct FavoritesView: View {
     @Query private var favoriteItems: [FavoriteItem]
     
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             List {
                 ForEach(favoriteItems) { item in
                     FavoritesListView(favoriteItem: item)
@@ -28,9 +28,7 @@ struct FavoritesView: View {
                     EditButton()
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

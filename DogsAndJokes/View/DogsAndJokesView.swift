@@ -16,6 +16,8 @@ struct DogsAndJokesView: View {
     @State private var jokeModel: JokeModel?
     @State private var isLike : Bool = false
         
+    @State private var orientation = UIDeviceOrientation.unknown
+    
     var body: some View {
         VStack {
             HStack {
@@ -24,9 +26,16 @@ struct DogsAndJokesView: View {
                 }) {
                     URLImage(url: URL(string: dogModel?.message ?? ""))
                         .cornerRadius(10)
-                        .frame(width: UIScreen.screenWidth - 100,
-                           height: UIScreen.screenWidth - 100)
+                        .frame(width: UIScreen.screenWidth -
+                               (orientation == .portrait ||
+                                orientation == .unknown ? 100 : 200),
+                           height: UIScreen.screenWidth -
+                               (orientation == .portrait ||
+                                orientation == .unknown ? 100 : 200))
                         .padding(10)
+                        .onRotate { newOrientation in
+                            orientation = newOrientation
+                        }
                 }.foregroundColor(.black)
                 
                 Button(action: {
@@ -44,8 +53,7 @@ struct DogsAndJokesView: View {
                 Text("\(jokeModel?.setup ?? "") \n\(jokeModel?.punchline ?? "")")
                     .multilineTextAlignment(.center)
             }
-            .padding(20)
-            .foregroundColor(.black)
+            .foregroundColor(.black)            
             
             Button(action: {
                 isLike = false
@@ -53,6 +61,7 @@ struct DogsAndJokesView: View {
             }) {
                 Text("Regenerate")
             }
+            .padding(10)
             
         }.onFirstAppear {
             getData()

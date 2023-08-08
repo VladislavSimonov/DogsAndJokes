@@ -16,6 +16,8 @@
 		A04BF5D22A78F5D800D9D411 /* View+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5D12A78F5D800D9D411 /* View+Extention.swift */; };
 		A04BF5D42A78F89000D9D411 /* UIScreen+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5D32A78F89000D9D411 /* UIScreen+Extention.swift */; };
 		A04BF5D62A7920FF00D9D411 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5D52A7920FF00D9D411 /* FavoritesListView.swift */; };
+		A04BF5D92A7A5A0F00D9D411 /* OrientationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04BF5D82A7A5A0F00D9D411 /* OrientationInfo.swift */; };
+		A0851DB12A8246610042B710 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0851DB02A8246610042B710 /* DeviceRotationViewModifier.swift */; };
 		A092BA9E2A77A1D80055C12E /* DogsAndJokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BA9D2A77A1D80055C12E /* DogsAndJokesApp.swift */; };
 		A092BAA02A77A1D80055C12E /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BA9F2A77A1D80055C12E /* FavoritesView.swift */; };
 		A092BAA22A77A1D80055C12E /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092BAA12A77A1D80055C12E /* FavoriteItem.swift */; };
@@ -53,6 +55,8 @@
 		A04BF5D12A78F5D800D9D411 /* View+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extention.swift"; sourceTree = "<group>"; };
 		A04BF5D32A78F89000D9D411 /* UIScreen+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extention.swift"; sourceTree = "<group>"; };
 		A04BF5D52A7920FF00D9D411 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
+		A04BF5D82A7A5A0F00D9D411 /* OrientationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationInfo.swift; sourceTree = "<group>"; };
+		A0851DB02A8246610042B710 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		A092BA9A2A77A1D80055C12E /* DogsAndJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogsAndJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A092BA9D2A77A1D80055C12E /* DogsAndJokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsAndJokesApp.swift; sourceTree = "<group>"; };
 		A092BA9F2A77A1D80055C12E /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				A04BF5C42A77B5E000D9D411 /* URLImage.swift */,
+				A04BF5D82A7A5A0F00D9D411 /* OrientationInfo.swift */,
+				A0851DB02A8246610042B710 /* DeviceRotationViewModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -343,7 +349,9 @@
 				A04BF5CC2A77EBD800D9D411 /* DogModel.swift in Sources */,
 				A04BF5D22A78F5D800D9D411 /* View+Extention.swift in Sources */,
 				A092BAA22A77A1D80055C12E /* FavoriteItem.swift in Sources */,
+				A0851DB12A8246610042B710 /* DeviceRotationViewModifier.swift in Sources */,
 				A04BF5D62A7920FF00D9D411 /* FavoritesListView.swift in Sources */,
+				A04BF5D92A7A5A0F00D9D411 /* OrientationInfo.swift in Sources */,
 				A04BF5C12A77B1B000D9D411 /* TabBarView.swift in Sources */,
 				A092BA9E2A77A1D80055C12E /* DogsAndJokesApp.swift in Sources */,
 				A04BF5CF2A78F04900D9D411 /* JokeModel.swift in Sources */,
